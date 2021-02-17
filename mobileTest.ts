@@ -9,9 +9,18 @@ let mobile3:Mobile = new Mobile ("Samsung Galaxy 10", "Galaxy 10", "Samsung", "m
 
 let mobiles: Mobile[] = [mobile1, mobile2, mobile3];
 
+// mobile2.is5G = true;
 
-mobile2.is5G = true;
+// mobile2.cameraNumber = 4;
 
-mobile2.cameraNumber = 4;
+// console.log(mobiles);
 
-console.log(mobiles);
+mobile2.setIs5G(true);
+console.log(mobile2.getIs5G());
+
+mobile2.setCameraNumber(4);
+console.log(mobile2.getCameraNumber());
+
+mobile1.impMobile();
+
+
