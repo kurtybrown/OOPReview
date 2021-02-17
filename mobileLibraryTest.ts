@@ -17,14 +17,16 @@ let mobiles2: Mobile[] = [mobile1, mobile4];
 
 let libreria1: MobileLibrary = new MobileLibrary("Espada", "Al lado de casa", mobiles);
 
-libreria1.totalPriceCalculation(mobiles);
 
-libreria1.setLocation("Ahí");
-libreria1.setMobile(mobiles2);
-libreria1.setName("Cayo Máximo");
-libreria1.setTotalPrice(5000);
 
-console.log(libreria1.getLocation());
-console.log(libreria1.getMobiles());
-console.log(libreria1.getName());
-console.log(libreria1.getTotalPrice());
+// libreria1.setLocation("Ahí");
+// libreria1.setMobile(mobiles2);
+// libreria1.setName("Cayo Máximo");
+// libreria1.setTotalPrice(5000);
+
+// console.log(libreria1.getLocation());
+// console.log(libreria1.getMobiles());
+// console.log(libreria1.getName());
+// console.log(libreria1.getTotalPrice());
+
+libreria1.printLibrary();

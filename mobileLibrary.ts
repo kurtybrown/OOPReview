@@ -13,6 +13,7 @@ export class MobileLibrary
         this.name = name;
         this.location = location;
         this.mobiles=mobiles;
+        this.totalPrice = this.totalPriceCalculation();
     }
 
     public getName():string
@@ -51,15 +52,27 @@ export class MobileLibrary
         this.totalPrice = totalPrice;
     }
 
-    public totalPriceCalculation(mobiles:Mobile[])
+    private totalPriceCalculation():number
     {
         this.totalPrice=0;
         
-        for(let i=0; i<mobiles.length; i++)
+        for(let i=0; i<this.mobiles.length; i++)
         {
-            this.totalPrice += mobiles[i].getPrice();
+            this.totalPrice += this.mobiles[i].getPrice();
         }
 
-        console.log(this.totalPrice);
+        return this.totalPrice;
     }
+    public printLibrary()
+    {
+        console.log("This are all my mobiles:");
+
+        for(let i=0; i<this.mobiles.length; i++)
+        {
+            this.mobiles[i].impMobile();
+        }
+
+        console.log(`Price overall: ${this.totalPrice}`);
+    }
+        
 }
